@@ -24,4 +24,13 @@ The default openocd configuration is for an [STM32F401 development board](https:
 
 ## Reading SWO Output
 
-You need to have an stlink or jtag programmer/debugger attached to your Cortex-M development board (or chip breakout) that connects to the SWO signal. In some cases this may mean soldering bridges, or connecting it yourself to eg the `PB3` pin on a compact breakout board. The exact route for this varies from board to board and chip to chip.  Note that the cheap, widely available [stlink programmers](https://www.amazon.com/Aideepen-ST-Link-Programming-Emulator-Downloader/dp/B01J7N3RE6/ref=sr_1_1?keywords=stlink&qid=1581094343&s=electronics&sr=1-1) do not route the SWO signal, though you can modify the hardware yourself to do this.  Almost any stm32 discovery board, eg the inexpensive [stm32f0discovery](https://www.mouser.com/ProductDetail/STMicroelectronics/STM32F0DISCOVERY?qs=%2Fha2pyFadugozBplj2HA6I5SJWdyEV7UjcFqXknA50zpNg0Ehpc7VQ%3D%3D), can be used to act as a standalone stlink programmer with SWO routing. 
+You need to have an stlink or jtag programmer/debugger attached to your Cortex-M development board (or chip breakout) that connects to the SWO signal. 
+In some cases this may mean soldering bridges, or connecting it yourself to eg the `PB3` pin on a compact breakout board. 
+The exact route for this varies from board to board and chip to chip.  
+Note that the cheap, widely available [stlink programmers](https://www.amazon.com/Aideepen-ST-Link-Programming-Emulator-Downloader/dp/B01J7N3RE6/ref=sr_1_1?keywords=stlink&qid=1581094343&s=electronics&sr=1-1) do not route the SWO signal, though you can modify the hardware yourself to do this.  
+Almost any stm32 discovery board, eg the inexpensive [stm32f0discovery](https://www.mouser.com/ProductDetail/STMicroelectronics/STM32F0DISCOVERY?qs=%2Fha2pyFadugozBplj2HA6I5SJWdyEV7UjcFqXknA50zpNg0Ehpc7VQ%3D%3D), can be used to act as a standalone stlink programmer with SWO routing.
+
+With the default openocd configuration, output will be written to `itm.txt` in the local directory. 
+With the VSCode configuration you should see output written to the `SWO: ITM` output tab.
+
+ 
